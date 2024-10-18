@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'PHP', 'HTML/CSS', 'Git & GitHub' ,'Node.js', 'SQL', 'WordPress', 'FlutterFlow', 'Postman' ];
+  const skills = ['JavaScript', 'PHP', 'HTML/CSS', 'Git & GitHub' ,'Node.js', 'SQL', 'WordPress', 'FlutterFlow', 'Postman' ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,7 +136,7 @@ const About = () => {
           <div>
             <p>
               Hello! My name is Tanoo and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2018 when I first discovered what APIs are at my 2nd internship — just figurig out how to do a POST request on Postman taught a lot about JavaScript and from the learning HTML &amp; CSS was inevitable!
+              interest in web development started back in 2018 when I first discovered what APIs are — just figuring out how to do a POST request on Postman taught me a lot about JavaScript, and from there learning HTML, CSS &amp; PHP was inevitable!
             </p>
 
             <p>
