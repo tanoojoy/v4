@@ -1,8 +1,8 @@
 ---
 date: '2018-05-14'
-title: 'Lead Engineer'
+title: 'Electrical Engineering Intern'
 company: 'Rolls-Royce'
-location: 'Boston, MA'
+location: 'Seletar Campus, Singapore'
 range: 'May 2018 - Present'
 url: 'https://www.upstatement.com/'
 ---
