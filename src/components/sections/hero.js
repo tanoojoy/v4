@@ -65,9 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
+        I’m a software engineer specializing in building integrations between online platforms. APIs, middleware and POC's are my forte. Currently, I’m focused on learning how to do these on Wordpress and creating plugins at{' '}
         <a href="https://gws-technologies.com/" target="_blank" rel="noreferrer">
           GWS Techologies Ltd
         </a>
@@ -78,10 +76,10 @@ const Hero = () => {
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://www.linkedin.com/in/tanoojoy"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      See my LinkedIn!
     </a>
   );
 
