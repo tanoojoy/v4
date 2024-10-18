@@ -10,18 +10,18 @@ module.exports = {
       name: 'Instagram',
       url: 'https://www.instagram.com/msieur_sunshine',
     },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
-    },
+    // {
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/bchiang7',
+    // },
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/tanoojoy',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
-    },
+    }
+    // {
+    //   name: 'Codepen',
+    //   url: 'https://codepen.io/bchiang7',
+    // },
   ],
 
   navLinks: [
@@ -33,10 +33,10 @@ module.exports = {
       name: 'Experience',
       url: '/#jobs',
     },
-    {
-      name: 'Work',
-      url: '/#projects',
-    },
+    // {
+    //   name: 'Work',
+    //   url: '/#projects',
+    // },
     {
       name: 'Contact',
       url: '/#contact',
