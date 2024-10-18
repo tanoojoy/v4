@@ -1,13 +1,13 @@
 ---
-date: '2018-05-14'
+date: '2017-08-01'
 title: 'Electrical Engineering Intern'
 company: 'Rolls-Royce'
 location: 'Seletar Campus, Singapore'
-range: 'May 2018 - Present'
-url: 'https://www.upstatement.com/'
+range: 'Jan - Aug 2017'
+url: 'https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx'
 ---
 
-- Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more
-- Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements
-- Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders
-- Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship
+- Worked in research for wireless communications between sensors found in Rolls-Royce boat engines.
+- Proposed the usage of of the ARM microprocessor ATMEL SAM3X8E for sending annd receiving data wirelessly, with onne being submerged in engine oil.
+- Used different multiplexing and demultiplexing techninques to allow transmission of data from 8 sensors in a single radio channel.
+- Reached a sampling rate of 660k samples/s with a single sensor and 40 samples/s with 4 sensors - all of them providing real-time data.

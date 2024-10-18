@@ -1,12 +1,13 @@
 ---
-date: '2016-12-21'
-title: 'Software Engineer Co-op'
-company: 'Starry'
-location: 'Boston, MA'
-range: 'July - December 2016'
-url: 'https://starry.com/'
+date: '2018-08-15'
+title: 'Product Management Intern'
+company: 'Arcadier'
+location: 'Singapore'
+range: 'February - August 2016'
+url: 'https://www.arcadier.com/'
 ---
 
-- Engineered and improved major features of Starry's customer-facing Android web app using ES6, Handlebars, Backbone, Marionette, and CSS
-- Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with the Starry Station internet router
-- Collaborated with designers and other developers to ensure thoughtful and consistent user experiences across Starry’s iOS and Android mobile apps
+- Developed 3rd party apps to discover potential bugs & obstacles in app development on their platform.
+- Collaborated with developers, testers and designers to conceptualize, create and deploy new products.
+-  Gained insights on competitor strategies and tools by collaborating with cross-functional teams to identify and fill gaps in Arcadier’s strategy.
+- Documented 200+ APIs Arcadier APIs
