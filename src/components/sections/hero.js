@@ -65,7 +65,9 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building integrations between online platforms. APIs, middleware and POC's are my forte. Currently, I’m focused on learning how to do these on Wordpress and creating plugins at{' '}
+        I’m a software engineer specializing in building integrations between online platforms.
+        APIs, middleware and Proof of Concepts are what pique my interest. Currently, I’m currently
+        based in Mauritius and working at{' '}
         <a href="https://gws-technologies.com/" target="_blank" rel="noreferrer">
           GWS Techologies Ltd
         </a>

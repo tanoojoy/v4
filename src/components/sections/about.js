@@ -61,7 +61,6 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    
 
     &:hover,
     &:focus {
@@ -125,7 +124,24 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript', 'PHP', 'HTML/CSS', 'Git & GitHub' ,'Node.js', 'SQL', 'WordPress', 'FlutterFlow', 'Postman' ];
+  const skills = [
+    'JavaScript',
+    'PHP',
+    'Python',
+    'HTML/CSS',
+    'Kotlin',
+    'C++',
+    'Node.js',
+    'SQL',
+    'MongoDB',
+    'Redis',
+    'React Native',
+    'Next.js',
+    'Postman',
+    'GitHub',
+    'Expo Go',
+    'Figma',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,26 +151,28 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Tanoo and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2018 when I first discovered what APIs are — just figuring out how to do a POST request on Postman taught me a lot about JavaScript, and from there learning HTML, CSS &amp; PHP was inevitable!
+              Hello! My name is Tanoo and I don't like peace, I <strong>love</strong> problems. This
+              started when I discovered my love for coding in Singapore - jumping from coding on
+              microchips to web development at a startup. My head turns whenever someone wants to do
+              some kind of integration, or when something has never been tackled before. Or just
+              simply when APIs are mentionned. They're my thing. Postman is my favorite app.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://arcadier.com/">a start-up</a>, and {' '}
-              <a href="https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx">a huge corporation</a>. My
-              main focus these days is building Wordpress plugins at <a href="https://gws-technologies.com/">GWS</a> for a variety of
-              clients.
+              Until today, and I’ve had the privilege of working at{' '}
+              <a href="https://arcadier.com/">a start-up</a>, and{' '}
+              <a href="https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx">
+                a huge corporation
+              </a>
+              . My main focus these days is build custom solutions at{' '}
+              <a href="https://gws-technologies.com/">GWS</a> for a variety of clients.
             </p>
 
-            {/* <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
-            </p> */}
+            <p>
+              I also recently built custom logic to only allow students of the University of
+              Mauritius to login to a clothing shop{' '}
+              <a href="https://noira-apparel.com">using Shopify Liquid</a>{' '}
+            </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
@@ -168,7 +186,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/tanoo.jpeg"
+              src="../../images/profilepic.jpeg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
