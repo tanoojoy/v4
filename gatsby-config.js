@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Tanoo Joyekurun',
     description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Tanoo Joyekurun is a software engineer specializing in building integrations between online platforms. APIs, middleware and Proof of Concepts.',
     siteUrl: 'https://tanoojoy.netlify.app', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
