@@ -152,27 +152,26 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Tanoo and I don't like peace, I <strong>love</strong> problems. This
-              started when I discovered my love for coding in Singapore - jumping from coding on
-              microchips to web development at a startup. My head turns whenever someone wants to do
-              some kind of integration, or when something has never been tackled before. Or just
-              simply when APIs are mentionned. They're my thing. Postman is my favorite app.
+            Hi, I’m Tanoo – and no, I don’t like peace… I love problems.
+            My journey into the world of code began in Singapore, where I went from programming microchips to building full-fledged web applications. 
+            Ever since, I've been hooked on solving complex challenges—especially when it involves integrations, untapped territory, or, let's be real, anything with an API. 
+            Postman? My weapon of choice.
             </p>
 
             <p>
-              Until today, and I’ve had the privilege of working at{' '}
-              <a href="https://arcadier.com/">a start-up</a>, and{' '}
+            Over the years, I’ve had the opportunity to work across both{' '}
+              <a href="https://arcadier.com/">start-up chaos</a>, and{' '}
               <a href="https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx">
-                a huge corporation
+                corporate calm
               </a>
-              . My main focus these days is build custom solutions at{' '}
+              , and today, I build tailored digital solutions at {' '}
               <a href="https://gws-technologies.com/">GWS</a> for a variety of clients.
             </p>
 
             <p>
-              I also recently built custom logic to only allow students of the University of
-              Mauritius to login to a clothing shop{' '}
-              <a href="https://noira-apparel.com">using Shopify Liquid</a>{' '}
+            Most recently, I cooked up some custom {' '}
+              <a href="https://noira-apparel.com">Shopify Liquid</a>{' '}
+              logic to restrict login access on a university clothing store—only students from the University of Mauritius allowed. Gatekeeping, but make it stylish.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
