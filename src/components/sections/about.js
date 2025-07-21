@@ -168,11 +168,11 @@ const About = () => {
               <a href="https://gws-technologies.com/">GWS</a> for a variety of clients.
             </p>
 
-            <p>
+            {/* <p>
             Most recently, I cooked up some custom {' '}
               <a href="https://noira-apparel.com">Shopify Liquid</a>{' '}
               logic to restrict login access on a university clothing store—only students from the University of Mauritius allowed. Gatekeeping, but make it stylish.
-            </p>
+            </p> */}
 
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
