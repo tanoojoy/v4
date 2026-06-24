@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -29,6 +28,7 @@ const StyledHomeButton = styled(Link)`
 
 const NotFoundPage = ({ location }) => {
   const [isMounted, setIsMounted] = useState(false);
+  const transitionRef = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const NotFoundPage = ({ location }) => {
   }, []);
 
   const content = (
-    <StyledMainContainer className="fillHeight">
+    <StyledMainContainer className="fillHeight" ref={transitionRef}>
       <StyledTitle>404</StyledTitle>
       <StyledSubtitle>Page Not Found</StyledSubtitle>
       <StyledHomeButton to="/">Go Home</StyledHomeButton>
@@ -49,15 +49,17 @@ const NotFoundPage = ({ location }) => {
   );
 
   return (
-    <Layout location={location}>
-      <Helmet title="Page Not Found" />
-
+    <Layout location={location} title="Page Not Found">
       {prefersReducedMotion ? (
         <>{content}</>
       ) : (
         <TransitionGroup component={null}>
           {isMounted && (
-            <CSSTransition timeout={500} classNames="fadeup">
+            <CSSTransition
+              nodeRef={transitionRef}
+              timeout={500}
+              classNames="fadeup"
+            >
               {content}
             </CSSTransition>
           )}

@@ -173,7 +173,7 @@ const Projects = () => {
           fileAbsolutePath: { regex: "/content/projects/" }
           frontmatter: { showInProjects: { ne: false } }
         }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {
@@ -194,6 +194,7 @@ const Projects = () => {
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
+  const transitionRefs = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -203,7 +204,9 @@ const Projects = () => {
 
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealArchiveLink.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 100)),
+    );
   }, []);
 
   const GRID_LIMIT = 6;
@@ -224,7 +227,12 @@ const Projects = () => {
             </div>
             <div className="project-links">
               {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                <a
+                  href={github}
+                  aria-label="GitHub Link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Icon name="GitHub" />
                 </a>
               )}
@@ -234,7 +242,8 @@ const Projects = () => {
                   aria-label="External Link"
                   className="external"
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   <Icon name="External" />
                 </a>
               )}
@@ -247,7 +256,10 @@ const Projects = () => {
             </a>
           </h3>
 
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          <div
+            className="project-description"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </header>
 
         <footer>
@@ -267,7 +279,11 @@ const Projects = () => {
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
+      <Link
+        className="inline-link archive-link"
+        to="/archive"
+        ref={revealArchiveLink}
+      >
         view the archive
       </Link>
 
@@ -282,22 +298,33 @@ const Projects = () => {
         ) : (
           <TransitionGroup component={null}>
             {projectsToShow &&
-              projectsToShow.map(({ node }, i) => (
-                <CSSTransition
-                  key={i}
-                  classNames="fadeup"
-                  timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
-                  exit={false}>
-                  <StyledProject
+              projectsToShow.map(({ node }, i) => {
+                const nodeRef =
+                  transitionRefs.current[i] ||
+                  (transitionRefs.current[i] = React.createRef());
+
+                return (
+                  <CSSTransition
                     key={i}
-                    ref={el => (revealProjects.current[i] = el)}
-                    style={{
-                      transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}>
-                    {projectInner(node)}
-                  </StyledProject>
-                </CSSTransition>
-              ))}
+                    nodeRef={nodeRef}
+                    classNames="fadeup"
+                    timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
+                    exit={false}
+                  >
+                    <StyledProject
+                      ref={element => {
+                        nodeRef.current = element;
+                        revealProjects.current[i] = element;
+                      }}
+                      style={{
+                        transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
+                      }}
+                    >
+                      {projectInner(node)}
+                    </StyledProject>
+                  </CSSTransition>
+                );
+              })}
           </TransitionGroup>
         )}
       </ul>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
@@ -50,9 +49,7 @@ const TagTemplate = ({ pageContext, data, location }) => {
   const { edges } = data.allMarkdownRemark;
 
   return (
-    <Layout location={location}>
-      <Helmet title={`Tagged: #${tag}`} />
-
+    <Layout location={location} title={`Tagged: #${tag}`}>
       <StyledTagsContainer>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
@@ -86,7 +83,11 @@ const TagTemplate = ({ pageContext, data, location }) => {
                   {tags &&
                     tags.length > 0 &&
                     tags.map((tag, i) => (
-                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
+                      <Link
+                        key={i}
+                        to={`/pensieve/tags/${kebabCase(tag)}/`}
+                        className="tag"
+                      >
                         #{tag}
                       </Link>
                     ))}
@@ -124,10 +125,10 @@ TagTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount

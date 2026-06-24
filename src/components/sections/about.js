@@ -152,20 +152,24 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Hi, I’m Tanoo – and no, I don’t like peace… I love problems.
-            My journey into the world of code began in Singapore, where I went from programming microchips to building full-fledged web applications. 
-            Ever since, I've been hooked on solving complex challenges—especially when it involves integrations, untapped territory, or, let's be real, anything with an API. 
-            Postman? My weapon of choice.
+              Hi, I’m Tanoo – and no, I don’t like peace… I love problems. My
+              journey into the world of code began in Singapore, where I went
+              from programming microchips to building full-fledged web
+              applications. Ever since, I’ve been hooked on solving complex
+              challenges—especially when it involves integrations, untapped
+              territory, or, let’s be real, anything with an API. Postman? My
+              weapon of choice.
             </p>
 
             <p>
-            Over the years, I’ve had the opportunity to work across both{' '}
+              Over the years, I’ve had the opportunity to work across both{' '}
               <a href="https://arcadier.com/">start-up chaos</a>, and{' '}
               <a href="https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx">
                 corporate calm
               </a>
-              , and today, I build tailored digital solutions at {' '}
-              <a href="https://gws-technologies.com/">GWS</a> for a variety of clients.
+              , and today, I build tailored digital solutions at{' '}
+              <a href="https://gws-technologies.com/">GWS</a> for a variety of
+              clients.
             </p>
 
             {/* <p>

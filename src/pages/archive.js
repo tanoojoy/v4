@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -143,13 +142,13 @@ const ArchivePage = ({ location, data }) => {
 
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealTable.current, srConfig(200, 0));
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 10)));
+    revealProjects.current.forEach((ref, i) =>
+      sr.reveal(ref, srConfig(i * 10)),
+    );
   }, []);
 
   return (
-    <Layout location={location}>
-      <Helmet title="Archive" />
-
+    <Layout location={location} title="Archive">
       <main>
         <header ref={revealTitle}>
           <h1 className="big-heading">Archive</h1>
@@ -196,7 +195,9 @@ const ArchivePage = ({ location, data }) => {
                             <span key={i}>
                               {item}
                               {''}
-                              {i !== tech.length - 1 && <span className="separator">&middot;</span>}
+                              {i !== tech.length - 1 && (
+                                <span className="separator">&middot;</span>
+                              )}
                             </span>
                           ))}
                       </td>
@@ -219,7 +220,10 @@ const ArchivePage = ({ location, data }) => {
                             </a>
                           )}
                           {android && (
-                            <a href={android} aria-label="Google Play Store Link">
+                            <a
+                              href={android}
+                              aria-label="Google Play Store Link"
+                            >
                               <Icon name="PlayStore" />
                             </a>
                           )}
@@ -246,7 +250,7 @@ export const pageQuery = graphql`
   {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

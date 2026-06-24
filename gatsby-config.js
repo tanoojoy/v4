@@ -10,7 +10,6 @@ module.exports = {
     twitterUsername: '@bchiang7',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -77,7 +76,6 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
             },
           },
           {
@@ -147,12 +145,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-45666519-2',
       },
     },
   ],
