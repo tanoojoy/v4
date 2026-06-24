@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '3'
 title: 'Spotify x GitHub'
 cover: './spotify.png'
 github: 'https://github.com/tanoojoy/tanoojoy'
