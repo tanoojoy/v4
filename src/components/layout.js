@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
@@ -44,7 +44,7 @@ const Layout = ({ children, location, title }) => {
     }
 
     handleExternalLinks();
-  }, [isLoading]);
+  }, [isLoading, location.hash]);
 
   return (
     <>

@@ -37,7 +37,6 @@
     ]
   },
   "dependencies": {
-    "animejs": "^4.5.0",
     "gatsby": "^5.16.1",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-manifest": "^5.16.0",
