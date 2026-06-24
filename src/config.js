@@ -10,14 +10,14 @@ module.exports = {
       name: 'Instagram',
       url: 'https://www.instagram.com/msieur_sunshine',
     },
-    // {
-    //   name: 'Twitter',
-    //   url: 'https://twitter.com/bchiang7',
-    // },
+    {
+      name: 'Kaggle',
+      url: 'https://www.kaggle.com/tanooo',
+    },
     {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/tanoojoy',
-    }
+    },
     // {
     //   name: 'Codepen',
     //   url: 'https://codepen.io/bchiang7',

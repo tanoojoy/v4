@@ -1,6 +1,6 @@
 ---
 date: '2024-10-18'
-title: 'Full Stack Developer'
+title: 'Senior Full Stack Developer'
 company: 'GWS Technologies'
 location: 'Ebene, Mauritius'
 range: 'October 2024 - Present'
