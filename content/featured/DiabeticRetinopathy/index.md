@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Diabetic Retinopathy ML + API'
-cover: './course-card.png'
+cover: './DR.png'
 external: 'https://github.com/tanoojoy/diabetic-retinopathy'
 cta: 'https://github.com/tanoojoy/diabetic-retinopathy-API'
 tech:
