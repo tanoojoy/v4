@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
-import { usePrefersReducedMotion } from '@hooks';
+// import { usePrefersReducedMotion } from '@hooks';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -48,13 +48,13 @@ const StyledHeroSection = styled.section`
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  // const prefersReducedMotion = usePrefersReducedMotion();
   const itemRefs = useRef([]);
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    // if (prefersReducedMotion) {
+    //   return;
+    // }
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
@@ -62,21 +62,12 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Tanoo Joyekurun.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const three = <h3 className="big-heading">I build things.</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building integrations between
-        online platforms. APIs, middleware and Proof of Concepts are what pique
-        my interest. Currently, I’m currently based in Mauritius and working at{' '}
-        <a
-          href="https://gws-technologies.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GWS Techologies Ltd
-        </a>
-        .
+        I'm a firm believer that there is always a way to convert real life problems to technical solutions - through math, logic and automation.
+              I've already done this in my projects and jump on opportunities where the question asked is always "Is this even possible?"
       </p>
     </>
   );
@@ -95,7 +86,7 @@ const Hero = () => {
 
   return (
     <StyledHeroSection>
-      {prefersReducedMotion ? (
+      {false ? (
         <>
           {items.map((item, i) => (
             <div key={i}>{item}</div>

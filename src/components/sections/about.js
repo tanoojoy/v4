@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
-import { usePrefersReducedMotion } from '@hooks';
+// import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -115,33 +115,34 @@ const StyledPic = styled.div`
 
 const About = () => {
   const revealContainer = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  // const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    // if (prefersReducedMotion) {
+    //   return;
+    // }
 
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
   const skills = [
+    'Machine Learning',
+    'Node.js',
     'JavaScript',
     'PHP',
     'Python',
-    'HTML/CSS',
-    'Kotlin',
-    'C++',
-    'Node.js',
     'SQL',
     'MongoDB',
     'Redis',
-    'React Native',
     'Next.js',
-    'Postman',
-    'GitHub',
-    'Expo Go',
-    'Figma',
+    // 'React Native',
+    // 'C++',
+    // 'HTML/CSS',
+    // 'Kotlin',
+    // 'Postman',
+    // 'GitHub',
+    // 'Expo Go',
+    // 'Figma',
   ];
 
   return (
@@ -152,25 +153,20 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi, I’m Tanoo – and no, I don’t like peace… I love problems. My
-              journey into the world of code began in Singapore, where I went
-              from programming microchips to building full-fledged web
-              applications. Ever since, I’ve been hooked on solving complex
-              challenges—especially when it involves integrations, untapped
-              territory, or, let’s be real, anything with an API. Postman? My
-              weapon of choice.
+              I'm currently a Senior Full Stack engineer at {' '}
+              <a
+                href="https://gws-technologies.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GWS Techologies Ltd
+              </a>
+              . 
+              Born and raised in Mauritius, I studied in Singapore before coming back to Mauritius.
+              
             </p>
 
-            <p>
-              Over the years, I’ve had the opportunity to work across both{' '}
-              <a href="https://arcadier.com/">start-up chaos</a>, and{' '}
-              <a href="https://www.rolls-royce.com/country-sites/sea/our-locations/singapore.aspx">
-                corporate calm
-              </a>
-              , and today, I build tailored digital solutions at{' '}
-              <a href="https://gws-technologies.com/">GWS</a> for a variety of
-              clients.
-            </p>
+            {/* <p>The worst I could say is no. But there's only 1 way to find out - ask me.</p> */}
 
             {/* <p>
             Most recently, I cooked up some custom {' '}

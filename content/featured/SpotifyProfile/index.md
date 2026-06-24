@@ -1,15 +1,13 @@
 ---
 date: '2'
-title: 'Spotify Profile'
-cover: './demo.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+title: 'Spotify x GitHub'
+cover: './spotify.png'
+github: 'https://github.com/tanoojoy/tanoojoy'
+external: 'https://github.com/tanoojoy'
 tech:
-  - React
-  - Styled Components
-  - Express
   - Spotify API
-  - Heroku
+  - Vercel
+  - Node.js
 ---
 
-A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+Simple script that uses the Spotify API fetch what I'm currently listening to and generate an SVG of it.

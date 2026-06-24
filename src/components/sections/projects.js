@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { Icon } from '@components/icons';
-import { usePrefersReducedMotion } from '@hooks';
+// import { usePrefersReducedMotion } from '@hooks';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -195,12 +195,12 @@ const Projects = () => {
   const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
   const transitionRefs = useRef([]);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  // const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    // if (prefersReducedMotion) {
+    //   return;
+    // }
 
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealArchiveLink.current, srConfig());
@@ -288,7 +288,7 @@ const Projects = () => {
       </Link>
 
       <ul className="projects-grid">
-        {prefersReducedMotion ? (
+        {false ? (
           <>
             {projectsToShow &&
               projectsToShow.map(({ node }, i) => (
