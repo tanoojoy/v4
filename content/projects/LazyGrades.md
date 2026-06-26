@@ -1,6 +1,6 @@
 ---
 date: '2025-05-17'
-title: 'Computer Science University Tools'
+title: 'Lazy Grades'
 github: 'https://github.com/tanoojoy/lazy-grades'
 external: 'https://lazy-grades.vercel.app/'
 tech:
